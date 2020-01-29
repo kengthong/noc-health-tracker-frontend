@@ -7,6 +7,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 /* Pages */
 import LoginPage from './pages/login';
 import HomePage from './pages/home';
+import CreateGroupPage from './pages/createGroup';
+import GroupDetailPage from './pages/groupDetail';
 /* Pages */
 
 class App extends React.Component {
@@ -47,7 +49,9 @@ class App extends React.Component {
         <Router>
             <Switch>
                 <Route exact path="/login" component={LoginPage} />
-                
+                <Route exact path="/createGroup" component={CreateGroupPage} />
+                <Route exact path="/groupDetail" component={GroupDetailPage} />
+
                 {/* To build authentication in the future*/}
                 <Route path="/" component={HomePage} />
             </Switch>
