@@ -1,19 +1,13 @@
 import React from 'react';
+import { Container } from '@material-ui/core';
 
 class HomePage extends React.Component {
     render() {
         return (
-            <div>
+            <Container max-width='xs' style={{backgroundColor: 'blue'}}>
                 HOME PAGE
-            </div>
+            </Container>
         )
     }
 }
-// const HomePage = () => {
-//     return(
-//         <div>
-//             This is a home page
-//         </div>
-//     )
-// }
 export default HomePage;
