@@ -11,7 +11,7 @@ class HomePage extends React.Component {
     render() {
         return (
             <HomeContainer max-width='xs'>
-                HOME PAGE
+                <SideBar/>
             </HomeContainer>
         )
     }
