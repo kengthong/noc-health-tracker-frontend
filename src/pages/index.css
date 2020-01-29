@@ -1,0 +1,13 @@
+.max-screen-width {
+    max-width: 1024px;
+}
+
+@media screen and (max-width: 450px) {
+    .formbox-custom {
+      width: 96%;
+      margin: 20% auto;
+    }
+    .max-screen-width {
+        max-width: 100%;
+    }
+}
