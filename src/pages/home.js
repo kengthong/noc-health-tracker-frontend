@@ -1,13 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+import SideBar from '../components/sidebar.js';
 import { Container } from '@material-ui/core';
+
+const HomeContainer = styled(Container)`
+  font-family: roboto;
+`;
 
 class HomePage extends React.Component {
     render() {
         return (
-            <Container max-width='xs' style={{backgroundColor: 'blue'}}>
-                HOME PAGE
-            </Container>
+            <HomeContainer max-width='xs'>
+                <SideBar/>
+            </HomeContainer>
         )
     }
 }
+
 export default HomePage;
