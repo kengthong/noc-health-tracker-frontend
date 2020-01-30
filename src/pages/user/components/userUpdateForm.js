@@ -31,20 +31,20 @@ export default class userUpdateForm extends React.Component {
   componentDidMount = () => {};
 
   updateSliderValue = value => {
-      console.log(value);
       this.setState({
           temperature: value
       })
   }
 
   render() {
-    const { status, temperature } = this.props;
+    const { status } = this.props;
+    const { temperature } = this.state;
 
     return (
         <ActionableGroup>
             <StyledTitle>A quick update...</StyledTitle>
             <Typography variant="h5" >
-                Temperature: {this.state.temperature}°C
+                Temperature: {temperature}°C
             </Typography>
             <CustomizedSlider
             updateSliderValue={this.updateSliderValue}
