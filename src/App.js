@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { loadUser, setUser } from './actions/authenticate';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
+import "./index.css"
 
 /* Pages */
 import LoginPage from './pages/login';
@@ -10,6 +11,7 @@ import HomePage from './pages/home';
 import userMain from './pages/user/userMain';
 import CreateGroupPage from './pages/createGroup';
 import GroupDetailPage from './pages/groupDetail';
+import AdminDetailsPage from './pages/admin/home';
 
 /* Pages */
 
@@ -56,7 +58,9 @@ class App extends React.Component {
                 {/* To build authentication in the future*/}
 
                 <Route path="/usermain" component={userMain} />
-                <Route path="/" component={HomePage} />
+                {/* <Route path="/" component={HomePage} /> */}
+
+                <Route path="/" component={AdminDetailsPage} />
                 
             </Switch>
         </Router>
