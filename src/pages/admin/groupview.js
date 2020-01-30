@@ -2,21 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import { Container } from '@material-ui/core';
 import SideBar from '../../components/sidebar';
-import UserStatusForm from './components/userStatus';
-import UserUpdateForm from './components/userUpdateForm';
 
-const UserMainContainer = styled(Container)`
+const GroupViewContainer = styled(Container)`
   font-family: roboto;
 `;
 
-export default class userMain extends React.Component {
+/**
+ * To call, <groupViewPage group={group}/>
+ */
+export default class groupViewPage extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
         
       };
   }
-
 
   componentDidMount = () => {};
 
@@ -28,15 +28,12 @@ export default class userMain extends React.Component {
   }
 
   render() {
-    const { status } = this.state;
+    const { group } = this.props;
     return (
-      <UserMainContainer max-width='xs'>
+      <GroupViewContainer max-width='xs'>
         <SideBar/>
-        {!status && <UserStatusForm updateStatus={this.updateStatus}/>}
-        {status && 
-          <UserUpdateForm status={status}/>
-        } 
-       </UserMainContainer>
+        Group View
+       </GroupViewContainer>
     );
   }
 }

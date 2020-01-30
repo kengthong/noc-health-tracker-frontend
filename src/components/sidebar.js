@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 const StyledProfileList = styled(List)`
   padding-top:20px;
-  padding-bottom:2
+  padding-bottom:2px;
 `;
 
 const StyledAvatar = styled(Avatar)`
@@ -50,7 +50,7 @@ const OrganisationText = styled.text`
   font-size: smaller;
 `;
 
-export default function SideBar() {
+export default function SideBar(routeToHome) {
   const classes = useStyles();
   const [state, setState] = React.useState({
     left: false,
@@ -64,6 +64,11 @@ export default function SideBar() {
     setState({ ...state, [side]: open });
   };
 
+  // const goHome = () => {
+  //   const { history } = this.props;
+  //   history.push('/');
+  // }
+
   const sideList = side => (
     <div
       className={classes.list}
@@ -71,7 +76,7 @@ export default function SideBar() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <StyledProfileList>
-        <StyledAvatar>CB</StyledAvatar><br/>
+        <StyledAvatar >CB</StyledAvatar><br/>
         <NameText>Marcus Phua Jit Wei</NameText><br/>
         <PositionText>Teacher</PositionText><br/>
         <OrganisationText>Tembusu Secondary School</OrganisationText><br/>

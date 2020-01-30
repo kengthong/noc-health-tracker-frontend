@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from '@material-ui/core';
+import SideBar from '../components/sidebar.js';
 
 class CreateGroupPage extends React.Component {
     constructor(props) {
@@ -25,6 +26,7 @@ class CreateGroupPage extends React.Component {
     render() {
         return (
             <Container max-width='xs'>
+                <SideBar></SideBar>
                 <h1>Create New Group</h1>
                 <div>
                     <form onSubmit={this.handleSubmit}>

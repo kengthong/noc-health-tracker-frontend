@@ -9,7 +9,7 @@ class Teams extends React.Component {
                     return (
                         <div className="flex-row" style={{width: '30%',position: 'relative', alignItems: 'flex-end', minHeight: '130px', border: '1px solid #e8e8e8'}}>
                             <div className="flex-row" style={{alignItems: 'center', height: '100%'}}>
-                                <img style={{width: '100%'}} src={`https://picsum.photos/id/${i*i*i}/100/120/?blur=2`} />
+                                <img style={{width: '100%'}} src={`https://picsum.photos/id/${i*i*i}/100/120/?blur=2`} alt="haha"/>
                             </div>
                             <div style={{position: 'absolute', height: '60px', backgroundColor: 'rgba(190,190,190,0.8', width: '100%'}}>    
                                 {t.name}

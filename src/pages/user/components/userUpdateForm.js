@@ -37,7 +37,7 @@ export default class userUpdateForm extends React.Component {
   }
 
   render() {
-    const { status } = this.props;
+    // const { status } = this.props;
     const { temperature } = this.state;
 
     return (
