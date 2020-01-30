@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import SideBar from '../../components/sidebar';
 
 import TeamsInCharge from '../../components/teams-in-charge';
+import MembersAtRisk from '../../components/admin/memberatrisk';
 import GroupViewPage from './groupview';
 
 const AdminHomeContainer = styled(Container)`
@@ -15,7 +16,7 @@ class AdminHomePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          
+            isAtRiskMember: false
         };
     }
 
@@ -29,19 +30,38 @@ class AdminHomePage extends React.Component {
                 activeGroup: { 
                     name: "Class-3A",
                     organisation: "Tembusu Secondary School"
-                }
+                },
+                isAtRiskMember: false,
             })
         }
     }
 
+    handleIsAtRiskMember = () => {
+        const {isAtRiskMember} = this.state;
+        this.setState({
+            isAtRiskMember: !isAtRiskMember,
+            activeGroup: null
+        })
+    }
+
+    handleMainPage = () => {
+        this.setState({
+            activeGroup: null,
+            isAtRiskMember: false,
+        })
+    }
+
     render() {
-        const {activeGroup} = this.state;
+        const { activeGroup, isAtRiskMember } = this.state;
         return (
             <AdminHomeContainer max-width='xs'>
                 <SideBar/>
-                { !activeGroup && <TeamsInCharge /> }
+                <button onClick={this.handleMainPage}>Main Page</button>
                 <button onClick={this.handleChangeActiveGroup}>View/Unview Group</button>
-                { activeGroup && <GroupViewPage group={activeGroup}/> }
+                <button onClick={this.handleIsAtRiskMember}>View Risky Groups</button>
+                { !activeGroup && !isAtRiskMember && <TeamsInCharge /> }
+                { activeGroup && !isAtRiskMember && <GroupViewPage group={activeGroup}/> }
+                { isAtRiskMember && !activeGroup && <MembersAtRisk /> }
             </AdminHomeContainer>
         )
     }

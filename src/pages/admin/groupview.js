@@ -9,7 +9,6 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import MaterialTable from 'material-table';
 
 import {
-    Add,
     AddBox,
     ArrowUpward,
     Check,
@@ -25,8 +24,6 @@ import {
     SaveAlt,
     Search,
     ViewColumn,
-    Visibility,
-    VisibilityOff
   } from '@material-ui/icons';
 
 const tableIcons = {
