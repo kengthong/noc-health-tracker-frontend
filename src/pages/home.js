@@ -8,10 +8,16 @@ const HomeContainer = styled(Container)`
 `;
 
 class HomePage extends React.Component {
+    goToUserUpdate = () => {
+        const { history } = this.props;
+        history.push('/usermain');
+    }
+
     render() {
         return (
             <HomeContainer max-width='xs'>
                 <SideBar/>
+                <button onClick={this.goToUserUpdate}>Press</button>
             </HomeContainer>
         )
     }

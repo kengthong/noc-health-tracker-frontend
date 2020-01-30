@@ -27,7 +27,7 @@ const StyledProfileList = styled(List)`
 const StyledAvatar = styled(Avatar)`
   margin-left: 10px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   height: 75px;
   width: 75px;
 `;
