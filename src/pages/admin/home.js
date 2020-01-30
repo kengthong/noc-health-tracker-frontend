@@ -4,7 +4,7 @@ import { Container } from '@material-ui/core';
 import SideBar from '../../components/sidebar';
 
 import TeamsInCharge from '../../components/teams-in-charge';
-import groupViewPage from './groupview';
+import GroupViewPage from './groupview';
 
 const AdminHomeContainer = styled(Container)`
   font-family: roboto;
@@ -41,7 +41,7 @@ class AdminHomePage extends React.Component {
                 <SideBar/>
                 { !activeGroup && <TeamsInCharge /> }
                 <button onClick={this.handleChangeActiveGroup}>View/Unview Group</button>
-                { activeGroup && <groupViewPage group={activeGroup}/> }
+                { activeGroup && <GroupViewPage group={activeGroup}/> }
             </AdminHomeContainer>
         )
     }

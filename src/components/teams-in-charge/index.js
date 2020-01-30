@@ -1,9 +1,6 @@
 import React from 'react';
-import { Avatar } from '@material-ui/core';
-
 import Teams from './teams';
 import CreateGroupButton from './button';
-import SideBar from '../sidebar.js';
 
 class TeamsInCharge extends React.Component {
     render() {
